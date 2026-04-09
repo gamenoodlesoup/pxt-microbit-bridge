@@ -1,14 +1,13 @@
 {
     "name": "pxt-microbit-bridge",
     "version": "1.0.0",
-    "description": "micro:bit ↔ Minecraft bridge — Send messages, sensor readings and variables between micro:bit and Minecraft Education Edition",
+    "description": "micro:bit to Minecraft bridge - Send messages, sensor readings and variables between micro:bit and Minecraft Education Edition",
     "dependencies": {
         "core": "*",
         "music": "*"
     },
     "files": [
-        "main.ts",
-        "README.md"
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
