@@ -1,6 +1,6 @@
 {
     "name": "pxt-microbit-bridge",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "micro:bit to Minecraft bridge - Send messages, sensor readings and variables between micro:bit and Minecraft Education Edition",
     "dependencies": {
         "core": "*",
