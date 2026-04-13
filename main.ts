@@ -67,21 +67,13 @@ serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
     let line = serial.readUntil(serial.delimiters(Delimiters.NewLine)).trim()
     if (line.length === 0) return
     if (line.indexOf("CODE:") === 0) {
+        // Store code silently — don't scroll it on the LED
         _bridgePairingCode = line.substr(5)
-        _bridgeShowingCode = true
-        basic.showString(_bridgePairingCode)
+        basic.showIcon(IconNames.Yes)
+        basic.pause(500)
+        basic.clearScreen()
     } else if (line.indexOf("CMD:") === 0) {
         _bridgeHandleCommand(line.substr(4))
-    }
-})
-
-// Background: keep showing pairing code on LED
-basic.forever(function () {
-    if (_bridgeShowingCode && _bridgePairingCode.length > 0) {
-        basic.showString(_bridgePairingCode)
-        basic.pause(500)
-    } else {
-        basic.pause(100)
     }
 })
 
