@@ -1,4 +1,4 @@
-// Icon lookup — uses if/else chain instead of object map (MakeCode STS compatible)
+// Icon lookup - uses if/else chain instead of object map (MakeCode STS compatible)
 function _bridgeLookupIcon(name: string): number {
     if (name == "heart") return IconNames.Heart
     if (name == "happy") return IconNames.Happy
@@ -62,7 +62,7 @@ function _bridgeHandleCommand(cmd: string): void {
     }
 }
 
-// Serial listener — process incoming lines
+// Serial listener - process incoming lines
 serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
     let line = serial.readUntil(serial.delimiters(Delimiters.NewLine)).trim()
     if (line.length === 0) return

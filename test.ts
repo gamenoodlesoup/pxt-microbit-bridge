@@ -1,4 +1,4 @@
-// Test file — used when testing inside MakeCode editor
+// Test file - used when testing inside MakeCode editor
 
 // Send a message when button A is pressed
 input.onButtonPressed(Button.A, function () {
